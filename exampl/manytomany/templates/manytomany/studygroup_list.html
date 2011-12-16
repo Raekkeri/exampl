@@ -1,0 +1,17 @@
+<html>
+    <head><title>test</title></head>
+    <body>
+        <ul>
+            {% for sg in object_list %}
+            <li>
+            {{ sg.name }}
+            <ul>
+                {% for user in sg.users.all %}
+                <li>{{ user.username }}</li>
+                {% endfor %}
+            </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

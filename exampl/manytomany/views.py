@@ -5,8 +5,10 @@ from models import StudyGroup
 
 class StudyGroupList(ListView):
     model = StudyGroup
+    paginate_by = 5
 
     def get_context_data(self, **kwargs):
+        kwargs = super(StudyGroupList, self).get_context_data(**kwargs)
         studygroup_list = kwargs['object_list']
         studygroup_users = StudyGroup.users.through.objects
         studygroup_users = studygroup_users.filter(

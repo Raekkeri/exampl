@@ -17,7 +17,7 @@ class StudyGroupList(ListView):
         studygroup_users = studygroup_users.order_by('studygroup')
         grouped_users = {}
         for k, g in groupby(studygroup_users, lambda o: o.studygroup_id):
-            grouped_users[k] = list(g)
+            grouped_users[k] = [o.user for o in g]
         for sg in studygroup_list:
             sg.studygroup_users = grouped_users.pop(sg.id, [])
         return kwargs

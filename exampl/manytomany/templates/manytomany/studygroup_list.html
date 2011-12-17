@@ -6,9 +6,15 @@
             <li>
             {{ sg.name }}
             <ul>
+                {% for sg_user in sg.studygroup_users %}
+                <li>{{ sg_user.user.username }}</li>
+                {% endfor %}
+
+                {% comment %} COMMENTED OUT, INEFFECTIVE
                 {% for user in sg.users.all %}
                 <li>{{ user.username }}</li>
                 {% endfor %}
+                {% endcomment %}
             </ul>
             </li>
             {% endfor %}

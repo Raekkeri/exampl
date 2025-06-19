@@ -1,0 +1,16 @@
+{
+  "$id": "https://raw.githubusercontent.com/Raekkeri/exampl/refs/heads/master/testprj.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Project",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "id."
+    },
+    "name": {
+      "type": "string",
+      "description": "name."
+    }
+  }
+}

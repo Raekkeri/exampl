@@ -6,7 +6,7 @@
   "properties": {
     "firstName": {
       "type": "string",
-      "description": "The person's first name."
+      "description": "The person's first nameeeee."
     },
     "lastName": {
       "type": "string",
